@@ -1,0 +1,790 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: white;
+    color: black;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Serif Display', serif;
+}
+
+button {
+    background-color: orangered;
+    padding: 9px 10px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #f99774;
+    color: black;
+}
+
+span{
+    color: orangered;
+}
+
+/* Header Area */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #000000c1;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+header span{
+    color: orangered;
+}
+
+.nav-menu a{
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover{
+    color: orangered;
+}
+
+.nav-menu a:active{
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+.contact{
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+}
+
+.contact:hover{
+    color: black;
+}
+
+/* Profile Section CSS */
+#profile{
+    width: 100%;
+    min-height: 90vh;
+    background: rgba(241, 241, 241);
+    display: flex;
+    align-items: center;
+    gap: 5em;
+    padding: 10px 10% 0;
+}
+
+.profile-content{
+    max-width: 800px;
+}
+
+.profile-content h3{
+    font-size: 40px;
+}
+
+.profile-content h1{
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+.profile-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+
+.img-box img{
+    border: 2px solid orangered;
+    border-radius: 50%;
+    width: 390px;
+    height: 400px;
+    box-shadow: 0 0 25px orangered, 0 0 5px orangered;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 50px;
+}
+
+/* About Section CSS */
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 10%;
+    gap: 8em;
+    background-color: rgb(29, 28, 28);
+}
+
+.about-content h2{
+    text-align: left;
+    color: white;
+    font-size: 36px;
+}
+
+.about-content h3{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.about-content p{
+    font-size: 20px;
+    color: white;
+    line-height: 2;
+    margin: 2em 0 1em;
+}
+
+/* Skills Area CSS */
+#skills{
+    background: rgba(241, 241, 241);
+    padding-bottom: 25px;
+    margin: 2em 0;
+}
+
+.skill-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.skill-content h2{
+    text-align: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    font-size: 38px;
+    padding-top: 2%;
+}
+
+.skill-list{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px 30px 35px;
+    width: 100%;
+    max-width: 50rem;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 20px rgb(241, 196, 179);
+}
+
+.skill-list h3{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.bar{
+    background-color: rgb(38, 36, 36);
+    width: 100%;
+    height: 15px;
+    border-radius: 10px;
+}
+
+.bar div{
+    height: 15px;
+    border-radius: 10px;
+    width: 0%;
+}
+
+.proficiency{
+    height: 40px;
+    width: 40px;
+    color: black;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    float: right;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: -14px;
+    margin-right: -25px;
+}
+
+.html{
+    background-color: #e91e63;
+    animation: progress1 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+.css{
+    background-color: #4d1ee9;
+    animation: progress2 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+.js{
+    background-color: #9c27b0;
+    animation: progress3 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+.php{
+    background-color: #cddc39;
+    animation: progress4 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+.sql{
+    background-color: #e92f1e;
+    animation: progress5 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+.html span{
+    border: 2px solid #e91e63;
+}
+.css span{
+    border: 2px solid #4d1ee9;
+}
+.js span{
+    border: 2px solid #9c27b0;
+}
+.php span{
+    border: 2px solid #cddc39;
+}
+.sql span{
+    border: 2px solid #e92f12;
+}
+
+@keyframes progress1{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 89%;
+    }
+}
+@keyframes progress2{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 73%;
+    }
+}
+@keyframes progress3{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 80%;
+    }
+}
+@keyframes progress4{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 65%;
+    }
+}
+@keyframes progress5{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 54%;
+    }
+}
+
+/* Resume Area CSS */
+#resume {
+    background: rgb(58, 56, 56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+.resume-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.resume-content h2 {
+    color: white;
+    text-align: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    font-size: 38px;
+}
+
+.resume-content p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+#resume a{
+    width: 165px;
+    background-color: orangered;
+    padding: 10px 5px 10px 10px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Project Area CSS  */
+
+#projects{
+    background: rgba(241, 241, 241);
+    padding: 10px;
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-content h2{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 38px;
+    padding-top: 2%;
+}
+
+#projects p{
+    font-size: 20px;
+    color: black;
+    line-height: 1;
+    margin: 0.1em 0 1.5em;
+    text-align: center;
+}
+
+#projects .project-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.project-number{
+    border: 2px solid orangered;
+    width: 100%;
+    max-width: 50rem;
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-number h3{
+    text-align: left;
+    margin-left: 5px;
+    text-decoration: underline;
+    font-size: 30px;
+    color: rgb(248, 99, 45);
+}
+
+/* Contact section CSS  */
+
+#contact{
+    background: rgb(238, 216, 216);
+    padding-bottom: 5px;
+    padding: 20px;
+}
+
+.contact-form{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 36px;
+    padding-top: 2%;
+}
+
+#contact p{
+    font-size: 20px;
+    color: black;
+    line-height: 1.5;
+    margin: 0.1em 0 1.5em;
+    text-align: center;
+}
+
+#contact form{
+    border: 2px solid orangered;
+    border-radius: 0.8rem;
+    background-color: white;
+    max-width: 45em;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 2em;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#contact form .input-box input,
+#contact form textarea{
+    width: 100%;
+    padding: 1em;
+    font-size: 15px;
+    color: black;
+    background-color: rgba(241, 241, 241);
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid rgb(126, 123, 123);
+}
+
+#contact #submit-btn{
+    width: 100%;
+    background-color: orangered;
+    padding: 12px 15px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Footer Area CSS  */
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #121315;
+}
+
+.footer .socialmedia {
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.footer .socialmedia a {
+    font-size: 20px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 40px;
+    padding: 15px;
+    margin: 0 8px;
+    height: 20px;
+    line-height: 1em;
+    box-shadow: inset 0 0 5px white;
+    transition: 0.3s ease;
+}
+
+.footer .socialmedia a:hover {
+    color: orangered;
+    border: 3px solid orangered;
+    box-shadow: inset 0 0 5px orangered;
+}
+
+.socialmedia i {
+    font-size: 25px;
+}
+
+.footer .copyright {
+    margin-top: 35px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .header {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-menu a {
+        margin: 5px 6px;
+        font-size: 15px;
+    }
+
+    #profile {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .img-box img {
+        width: 300px;
+        height: 310px;
+    }
+
+    .project-content h2 {
+        font-size: 32px;
+    }
+
+    #projects p {
+        font-size: 18px;
+    }
+
+    .project-number h3 {
+        font-size: 26px;
+    }
+
+    .contact-form {
+        font-size: 32px;
+    }
+
+    #contact p {
+        font-size: 18px;
+    }
+
+    #contact form {
+        padding: 15px;
+    }
+
+    #contact #submit-btn {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer .socialmedia a {
+        font-size: 18px;
+        width: 35px;
+        padding: 12px;
+    }
+
+    .socialmedia i {
+        font-size: 22px;
+    }
+
+    .footer .copyright {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 5%;
+    }
+
+    .nav-menu a {
+        font-size: 10px;
+        margin: 3px 4px;
+    }
+
+    .profile-content h3 {
+        font-size: 35px;
+    }
+
+    .profile-content h1 {
+        font-size: 40px;
+    }
+
+    .profile-content p {
+        font-size: 16px;
+    }
+
+    .img-box img {
+        width: 250px;
+        height: 260px;
+    }
+
+    .project-content h2 {
+        font-size: 28px;
+    }
+
+    #projects p {
+        font-size: 16px;
+    }
+
+    .project-number {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .project-number h3 {
+        font-size: 24px;
+    }
+
+    .contact-form {
+        font-size: 28px;
+    }
+
+    #contact p {
+        font-size: 16px;
+    }
+
+    #contact form {
+        padding: 12px;
+    }
+
+    #contact #submit-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer .socialmedia a {
+        font-size: 16px;
+        width: 30px;
+        padding: 10px;
+    }
+
+    .socialmedia i {
+        font-size: 20px;
+    }
+
+    .footer .copyright {
+        font-size: 16px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 2%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-menu a {
+        font-size: 8px;
+        margin: 2px 3px;
+    }
+
+    #profile {
+        padding: 10px 5%;
+    }
+
+    .profile-content h3 {
+        font-size: 28px;
+    }
+
+    .profile-content h1 {
+        font-size: 32px;
+    }
+
+    .profile-content p {
+        font-size: 14px;
+    }
+
+    .img-box img {
+        width: 200px;
+        height: 210px;
+    }
+
+    .project-content h2 {
+        font-size: 24px;
+    }
+
+    #projects p {
+        font-size: 14px;
+    }
+
+    .project-number {
+        width: 100%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .project-number h3 {
+        font-size: 22px;
+    }
+
+    .contact-form {
+        font-size: 24px;
+    }
+
+    #contact p {
+        font-size: 14px;
+    }
+
+    #contact form {
+        padding: 10px;
+    }
+
+    #contact #submit-btn {
+        font-size: 14px;
+        padding: 9px;
+    }
+
+    .footer {
+        padding: 15px 0;
+    }
+
+    .footer .socialmedia a {
+        font-size: 14px;
+        width: 28px;
+        padding: 8px;
+    }
+
+    .socialmedia i {
+        font-size: 18px;
+    }
+
+    .footer .copyright {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}
+
